@@ -1,6 +1,6 @@
 ---
-date: 2023.1.29
 title: TypeScript Handbook 阅读笔记
+date: 2023.1.29
 outline: [2, 3]
 ---
 

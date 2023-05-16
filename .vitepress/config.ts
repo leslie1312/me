@@ -9,6 +9,13 @@ export default defineConfig({
   description: "just a blog",
   lang: "zh-CN",
 
+  markdown: {
+    theme: {
+      light: "github-light",
+      dark: "github-dark",
+    },
+  },
+
   vite: {
     resolve: { alias },
     plugins: [...vitePlugins],

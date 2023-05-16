@@ -1,0 +1,18 @@
+:root {
+  --vp-c-text-light-1: #333;
+
+  --vp-c-brand: #ed635a;
+  --vp-c-brand-light: #ff8a7d;
+  --vp-c-brand-lighter: #ffb2a3;
+  --vp-c-brand-dark: #c13b38;
+  --vp-c-brand-darker: #940619;
+  --vp-c-brand-next: #949510;
+
+  --vp-scrollbar: #ccc;
+  --vp-scrollbar-hover: #aaa;
+}
+
+.dark {
+  --vp-scrollbar: #444;
+  --vp-scrollbar-hover: #333;
+}

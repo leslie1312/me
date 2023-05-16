@@ -1,6 +1,6 @@
 ---
-date: 2023.3.6
 title: Git 撤销操作
+date: 2023.3.6
 outline: [2, 3]
 ---
 

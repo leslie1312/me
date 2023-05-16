@@ -34,6 +34,9 @@ devDependencies:
   prettier:
     specifier: ^2.8.8
     version: registry.npmmirror.com/prettier@2.8.8
+  simple-git:
+    specifier: ^3.18.0
+    version: registry.npmmirror.com/simple-git@3.18.0
   typescript:
     specifier: ^5.0.4
     version: registry.npmmirror.com/typescript@5.0.4
@@ -636,6 +639,22 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': registry.npmmirror.com/@jridgewell/resolve-uri@3.1.0
       '@jridgewell/sourcemap-codec': registry.npmmirror.com/@jridgewell/sourcemap-codec@1.4.14
+    dev: true
+
+  registry.npmmirror.com/@kwsites/file-exists@1.1.1:
+    resolution: {integrity: sha512-m9/5YGR18lIwxSFDwfE3oA7bWuq9kdau6ugN4H2rJeyhFQZcG9AgSHkQtSD15a8WvTgfz9aikZMrKPHvbpqFiw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@kwsites/file-exists/-/file-exists-1.1.1.tgz}
+    name: '@kwsites/file-exists'
+    version: 1.1.1
+    dependencies:
+      debug: registry.npmmirror.com/debug@4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  registry.npmmirror.com/@kwsites/promise-deferred@1.1.1:
+    resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@kwsites/promise-deferred/-/promise-deferred-1.1.1.tgz}
+    name: '@kwsites/promise-deferred'
+    version: 1.1.1
     dev: true
 
   registry.npmmirror.com/@nodelib/fs.scandir@2.1.5:
@@ -1943,6 +1962,18 @@ packages:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/signal-exit/-/signal-exit-3.0.7.tgz}
     name: signal-exit
     version: 3.0.7
+    dev: true
+
+  registry.npmmirror.com/simple-git@3.18.0:
+    resolution: {integrity: sha512-Yt0GJ5aYrpPci3JyrYcsPz8Xc05Hi4JPSOb+Sgn/BmPX35fn/6Fp9Mef8eMBCrL2siY5w4j49TA5Q+bxPpri1Q==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/simple-git/-/simple-git-3.18.0.tgz}
+    name: simple-git
+    version: 3.18.0
+    dependencies:
+      '@kwsites/file-exists': registry.npmmirror.com/@kwsites/file-exists@1.1.1
+      '@kwsites/promise-deferred': registry.npmmirror.com/@kwsites/promise-deferred@1.1.1
+      debug: registry.npmmirror.com/debug@4.3.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.npmmirror.com/sirv@2.0.3:

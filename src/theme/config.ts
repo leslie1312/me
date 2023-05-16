@@ -1,20 +1,23 @@
-// https://vitepress.dev/reference/site-config
-
 export const siteConfig = {}
 
+export const lastConfig = [
+  { text: "导航", link: "/nav" },
+  { text: "轻语", link: "/one" },
+  { text: "关于", link: "/about" },
+]
+
+export const navConfig = [
+  { text: "首页", link: "/" },
+  { text: "日常", link: "posts/", activeMatch: "posts" },
+  { text: "笔记", link: "notes/", activeMatch: "notes" },
+  {
+    text: "Last",
+    items: lastConfig,
+  },
+]
+
 export const themeConfig = {
-  nav: [
-    { text: "Home", link: "/" },
-    { text: "Posts", link: "posts/", activeMatch: "posts" },
-    { text: "Notes", link: "notes/", activeMatch: "notes" },
-    {
-      text: "Last",
-      items: [
-        { text: "导航", link: "/nav" },
-        { text: "关于", link: "/about" },
-      ],
-    },
-  ],
+  nav: navConfig,
   sidebar: {
     notes: [
       {
@@ -22,6 +25,7 @@ export const themeConfig = {
         collapsed: true,
         items: [
           { text: "TypeScript Handbook", link: "/notes/ts-handbook" },
+          { text: "TypeScript 类型体操", link: "/notes/ts-type-gym" },
           { text: "TypeScript 类型挑战", link: "/notes/ts-type-challenges" },
           { text: "Git 撤销操作", link: "/notes/git-undo" },
           { text: "Git 分支操作", link: "/notes/git-branch" },
@@ -49,5 +53,3 @@ export const themeConfig = {
     ],
   },
 }
-
-// 休闲小游戏 数据展示 组件设计 阅读与练习
