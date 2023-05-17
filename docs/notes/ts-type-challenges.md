@@ -6,13 +6,13 @@ outline: deep
 
 # TypeScript 类型挑战
 
-> 🙏 题目来源 [type-challenges](https://github.com/type-challenges/type-challenges)
+> 🙏 本篇题目均来源于 [type-challenges](https://github.com/type-challenges/type-challenges) ❤️
 
 ## Built in
 
 ### Pick
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00004-easy-pick/README.md) | [playground](https://tsch.js.org/4/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00004-easy-pick/README.md) | [Playground](https://tsch.js.org/4/play)
 
 ```ts
 interface Todo {
@@ -37,7 +37,7 @@ type MyPick<T, K extends keyof T> = {
 
 ### Exclude
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00043-easy-exclude/README.md) | [playground](https://tsch.js.org/43/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00043-easy-exclude/README.md) | [Playground](https://tsch.js.org/43/play)
 
 ```ts
 type Result = MyExclude<"a" | "b" | "c", "a"> // 'b' | 'c'
@@ -53,7 +53,7 @@ type MyExclude<T, U> = T extends U ? never : T
 
 ### Parameters
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/03312-easy-parameters/README.md) | [playground](https://tsch.js.org/3312/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/03312-easy-parameters/README.md) | [Playground](https://tsch.js.org/3312/play)
 
 ```ts
 const foo = (arg1: string, arg2: number): void => {}
@@ -73,7 +73,7 @@ type MyParameters<T extends (...args: any[]) => any> = T extends (...args: infer
 
 ### Get Return type
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00002-medium-return-type/README.md) | [playground](https://tsch.js.org/2/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00002-medium-return-type/README.md) | [Playground](https://tsch.js.org/2/play)
 
 ```ts
 const fn = (v: boolean) => {
@@ -95,7 +95,7 @@ type MyReturnType<T extends (...args: any) => unknown> = T extends (...args: any
 
 ### Omit
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00003-medium-omit/README.md) | [playground](https://tsch.js.org/3/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00003-medium-omit/README.md) | [Playground](https://tsch.js.org/3/play)
 
 ```ts
 interface Todo {
@@ -126,7 +126,7 @@ type MyOmit$2<T, K extends keyof T> = {
 
 ### Awaited
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00189-easy-awaited/README.md) | [playground](https://tsch.js.org/189/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00189-easy-awaited/README.md) | [Playground](https://tsch.js.org/189/play)
 
 ```ts
 type ExampleType = Promise<string>
@@ -153,7 +153,7 @@ type Awaited<T> = T extends null | undefined
 
 ### Promise.all
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00020-medium-promise-all/README.md) | [playground](https://tsch.js.org/20/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00020-medium-promise-all/README.md) | [Playground](https://tsch.js.org/20/play)
 
 ```ts
 const promise1 = Promise.resolve(3)
@@ -178,7 +178,7 @@ const p = PromiseAll([promise1, promise2, promise3] as const)
 
 ### First of Array
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00014-easy-first/README.md) | [playground](https://tsch.js.org/14/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00014-easy-first/README.md) | [Playground](https://tsch.js.org/14/play)
 
 ```ts
 type arr1 = ["a", "b", "c"]
@@ -197,7 +197,7 @@ type First<T extends any[]> = T extends [infer F, ...any[]] ? F : never
 
 ### Concat
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00533-easy-concat/README.md) | [playground](https://tsch.js.org/533/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00533-easy-concat/README.md) | [Playground](https://tsch.js.org/533/play)
 
 ```ts
 type Result = Concat<[1], [2]> // expected to be [1, 2]
@@ -213,7 +213,7 @@ type Concat<T extends unknown[], U extends unknown[]> = [...T, ...U]
 
 ### Includes
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00898-easy-includes/README.md) | [playground](https://tsch.js.org/898/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00898-easy-includes/README.md) | [Playground](https://tsch.js.org/898/play)
 
 ```ts
 // expected to be `false`
@@ -240,7 +240,7 @@ type Includes<T extends readonly any[], U> = T extends [infer F, ...infer R]
 
 ### Push
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/03057-easy-push/README.md) | [playground](https://tsch.js.org/3057/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/03057-easy-push/README.md) | [Playground](https://tsch.js.org/3057/play)
 
 ```ts
 type Result = Push<[1, 2], "3"> // [1, 2, '3']
@@ -256,7 +256,7 @@ type Push<T, U> = T extends unknown[] ? [...T, U] : never
 
 ### AnyOf
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00949-medium-anyof/README.md) | [playground](https://tsch.js.org/949/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00949-medium-anyof/README.md) | [Playground](https://tsch.js.org/949/play)
 
 类型接收一个数组，如果数组中任一个元素为真，则返回 `true`，否则返回 `false`  
 如果数组为空，返回 `false`
@@ -277,7 +277,7 @@ type AnyOf<T extends readonly any[]> = T[number] extends False ? false : true
 
 ### IndexOf
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/05153-medium-indexof/README.md) | [playground](https://tsch.js.org/5153/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/05153-medium-indexof/README.md) | [Playground](https://tsch.js.org/5153/play)
 
 ```ts
 type Res = IndexOf<[1, 2, 3], 2> // expected to be 1
@@ -299,7 +299,7 @@ type IndexOf<T extends any[], U, LEN extends any[] = []> = T extends [infer F, .
 
 ### LastIndexOf
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/05317-medium-lastindexof/README.md) | [playground](https://tsch.js.org/5317/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/05317-medium-lastindexof/README.md) | [Playground](https://tsch.js.org/5317/play)
 
 ```ts
 type Res1 = LastIndexOf<[1, 2, 3, 2, 1], 2> // 3
@@ -323,7 +323,7 @@ type LastIndexOf<T extends any[], U, RES extends number = -1, LEN extends any[] 
 
 ### Without
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/05117-medium-without/README.md) | [playground](https://tsch.js.org/5117/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/05117-medium-without/README.md) | [Playground](https://tsch.js.org/5117/play)
 
 ```ts
 type Res = Without<[1, 2], 1> // expected to be [2]
@@ -357,7 +357,7 @@ type Without$1<T extends any[], U, RES extends any[] = []> = T extends [infer F,
 
 ### Flatten
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00459-medium-flatten/README.md) | [playground](https://tsch.js.org/459/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00459-medium-flatten/README.md) | [Playground](https://tsch.js.org/459/play)
 
 ```ts
 type flatten = Flatten<[1, 2, [3, 4], [[[5]]]]> // [1, 2, 3, 4, 5]
@@ -377,7 +377,7 @@ type Flatten<T extends any[]> = T extends [infer F, ...infer R]
 
 ### FlattenDepth
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/03243-medium-flattendepth/README.md) | [playground](https://tsch.js.org/3243/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/03243-medium-flattendepth/README.md) | [Playground](https://tsch.js.org/3243/play)
 
 ```ts
 type a = FlattenDepth<[1, 2, [3, 4], [[[5]]]], 2>
@@ -403,7 +403,7 @@ type FlattenDepth<T extends any[], K = 1, LEN extends any[] = []> = K extends LE
 
 ### Greater Than
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/04425-medium-greater-than/README.md) | [playground](https://tsch.js.org/4425/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/04425-medium-greater-than/README.md) | [Playground](https://tsch.js.org/4425/play)
 
 ```ts
 GreaterThan<2, 1> // true
@@ -430,7 +430,7 @@ type GreaterThan<
 
 ### Unique
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/05360-medium-unique/README.md) | [playground](https://tsch.js.org/5360/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/05360-medium-unique/README.md) | [Playground](https://tsch.js.org/5360/play)
 
 ```ts
 type Res = Unique<[1, 1, 2, 2, 3, 3]>
@@ -464,7 +464,7 @@ type Unique<T extends any[], RES extends any[] = []> = T extends [infer F, ...in
 
 ### Join
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/05310-medium-join/README.md) | [playground](https://tsch.js.org/5310/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/05310-medium-join/README.md) | [Playground](https://tsch.js.org/5310/play)
 
 ```ts
 type Res = Join<["a", "p", "p", "l", "e"], "-"> // expected to be 'a-p-p-l-e'
@@ -485,7 +485,7 @@ type Res3 = Join<["o"], "u"> // expected to be 'o'
 
 ### Merge
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00599-medium-merge/README.md) | [playground](https://tsch.js.org/599/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00599-medium-merge/README.md) | [Playground](https://tsch.js.org/599/play)
 
 ```ts
 type foo = {
@@ -513,7 +513,7 @@ type Merge<F, S> = {
 
 ### Diff
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00645-medium-diff/README.md) | [playground](https://tsch.js.org/645/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/00645-medium-diff/README.md) | [Playground](https://tsch.js.org/645/play)
 
 ```ts
 type Foo = {
@@ -554,7 +554,7 @@ type Diff<O, O1> = RemoveNever<{
 
 ### PickByType
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/02595-medium-pickbytype/README.md) | [playground](https://tsch.js.org/2595/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/02595-medium-pickbytype/README.md) | [Playground](https://tsch.js.org/2595/play)
 
 ```ts
 type OnlyBoolean = PickByType<
@@ -580,7 +580,7 @@ type PickByType<T, U> = {
 
 ### PartialByKeys
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/02757-medium-partialbykeys/README.md) | [playground](https://tsch.js.org/2757/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/02757-medium-partialbykeys/README.md) | [Playground](https://tsch.js.org/2757/play)
 
 ```ts
 interface User {
@@ -613,7 +613,7 @@ type PartialByKeys<T, K> = Join<
 
 ### OmitByType
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/02852-medium-omitbytype/README.md) | [playground](https://tsch.js.org/2852/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/02852-medium-omitbytype/README.md) | [Playground](https://tsch.js.org/2852/play)
 
 ```ts
 type OmitBoolean = OmitByType<
@@ -639,7 +639,7 @@ type OmitByType<T, U> = {
 
 ### RequiredByKeys
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/02759-medium-requiredbykeys/README.md) | [playground](https://tsch.js.org/2759/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/02759-medium-requiredbykeys/README.md) | [Playground](https://tsch.js.org/2759/play)
 
 ```ts
 interface User {
@@ -676,7 +676,7 @@ type RequiredByKeys$1<T, K = keyof T> = Copy<Omit<T, K & keyof T> & Required<Pic
 
 ### ObjectEntries
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/02946-medium-objectentries/README.md) | [playground](https://tsch.js.org/2946/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/02946-medium-objectentries/README.md) | [Playground](https://tsch.js.org/2946/play)
 
 ```ts
 interface Model {
@@ -699,7 +699,7 @@ type modelEntries = ObjectEntries<Model>
 
 ### Tuple to Nested Object
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/03188-medium-tuple-to-nested-object/README.md) | [playground](https://tsch.js.org/3188/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/03188-medium-tuple-to-nested-object/README.md) | [Playground](https://tsch.js.org/3188/play)
 
 ```ts
 type a = TupleToNestedObject<["a"], string> // {a: string}
@@ -718,7 +718,7 @@ type c = TupleToNestedObject<[], boolean>
 
 ### Flip
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/04179-medium-flip/README.md) | [playground](https://tsch.js.org/4179/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/04179-medium-flip/README.md) | [Playground](https://tsch.js.org/4179/play)
 
 ```ts
 Flip<{ a: "x"; b: "y"; c: "z" }> // {x: 'a', y: 'b', z: 'c'}
@@ -738,7 +738,7 @@ type Flip<T extends Record<PropertyKey, any>> = {
 
 ### InorderTraversal
 
-[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/03376-medium-inordertraversal/README.md) | [playground](https://tsch.js.org/3376/play)
+[GitHub](https://github.com/type-challenges/type-challenges/blob/main/questions/03376-medium-inordertraversal/README.md) | [Playground](https://tsch.js.org/3376/play)
 
 ```ts
 const tree1 = {

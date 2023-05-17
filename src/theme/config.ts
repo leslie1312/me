@@ -1,23 +1,25 @@
 export const siteConfig = {}
 
+export const navConfig = [
+  { text: "首页", link: "/" },
+  { text: "日常", link: "/posts/", activeMatch: "posts" },
+  { text: "笔记", link: "/notes/", activeMatch: "notes" },
+]
+
 export const lastConfig = [
   { text: "导航", link: "/nav" },
-  { text: "轻语", link: "/one" },
+  { text: "图文", link: "/one" },
   { text: "关于", link: "/about" },
 ]
 
-export const navConfig = [
-  { text: "首页", link: "/" },
-  { text: "日常", link: "posts/", activeMatch: "posts" },
-  { text: "笔记", link: "notes/", activeMatch: "notes" },
-  {
-    text: "Last",
-    items: lastConfig,
-  },
-]
-
 export const themeConfig = {
-  nav: navConfig,
+  nav: [
+    ...navConfig,
+    {
+      text: "Last",
+      items: lastConfig,
+    },
+  ],
   sidebar: {
     notes: [
       {
@@ -38,6 +40,9 @@ export const themeConfig = {
           { text: "2048", link: "/notes/g-2048" },
           { text: "扫雷", link: "/notes/g-minesweeper" },
           { text: "滑动拼图", link: "/notes/g-sliding-puzzle" },
+          { text: "小恐龙，快跑", link: "/notes/g-trex-runner" },
+          { text: "生命游戏", link: "/notes/g-conway-game" },
+          { text: "中国象棋", link: "/notes/g-xiangqi" },
         ],
       },
       {
@@ -50,6 +55,7 @@ export const themeConfig = {
         collapsed: true,
         items: [],
       },
+      {},
     ],
   },
 }

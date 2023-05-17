@@ -16,7 +16,10 @@ const logo = computed(() => (open.value ? "i-carbon-data-enrichment rotate-180" 
     @click="open = !open"
   >
     <div :class="[logo, 'transition-transform']" />
-    <div v-if="title">
+    <div
+      v-if="title"
+      class="text-sm"
+    >
       {{ title }}
     </div>
   </div>

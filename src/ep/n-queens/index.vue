@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useIntervalFn, useTimestamp, useWebWorkerFn } from "@vueuse/core"
 import { nQueens$2 } from "./solutions"
-import IconQueen from "./queen.vue"
+import IconQueen from "./icon-queen.vue"
 import { computed, ref, watch, watchEffect } from "vue"
 
 const MAX = 15

@@ -1,3 +1,4 @@
 ---
-layout: page
+layout: home
+title: welcome
 ---

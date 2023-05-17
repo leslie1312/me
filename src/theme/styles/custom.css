@@ -1,12 +1,5 @@
-@import url(./vars.css);
-
-.vp-doc blockquote {
-  font-style: unset;
-}
-
-.vp-doc a {
-  text-decoration: none;
-}
+@import url("./vars.css");
+@import url("./nprogress.css");
 
 .vp-doc h2 {
   margin-top: 32px;
@@ -25,28 +18,4 @@
 .vp-code-group .tabs {
   margin-left: 0;
   margin-right: 0;
-}
-
-/* scrollbar */
-
-::-webkit-scrollbar {
-  width: 9px;
-}
-
-::-webkit-scrollbar:horizontal {
-  height: 5px;
-}
-
-::-webkit-scrollbar-track,
-::-webkit-scrollbar-corner {
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: var(--vp-scrollbar);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--vp-scrollbar-hover);
 }

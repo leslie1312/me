@@ -1,3 +1,3 @@
-import { theme } from "../../src/theme/index"
+import { theme } from "../../src/theme";
 
-export default theme
+export default theme;
